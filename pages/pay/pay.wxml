@@ -1,0 +1,33 @@
+
+<view class="userInfo">
+    <view class="positionInfo">
+        <view class="username"> {{ username }} </view>
+        <view class="position"> {{ position }} </view>
+    </view>
+    <view class="phone"> {{phone}} </view>
+</view>
+
+<view class="cart-title">
+    购物车
+</view>
+
+<view class="good-list" wx:for="{{cart}}" wx:key='goods_id'>
+    <view class="img">
+        <image mode="widthFix" src='{{ item.goods_small_logo }}'></image>
+    </view>
+    <view class="good-info">
+        <view class="title"> {{ item.goods_name }} </view>
+        <view class="price-wrap">
+            <view class="price"> ￥{{ item.goods_price }} </view>
+            <view class="num"> x {{ item.num }} </view>
+        </view>
+    </view>
+</view>
+
+<view class="footer-tool">
+    <view class="price-wrap">
+        <view class="price">合计：<text>￥{{totalPrice}}</text></view>
+        <text class='isM'>包含运费</text>
+    </view>
+    <view class="pay" bindtap="handlePay">支付({{totalNum}})</view>
+</view>

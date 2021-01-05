@@ -1,0 +1,9 @@
+
+<view class="search-input">
+    <input type="text"  value='{{inputValue}}' placeholder="请输入需要搜索的关键词" bindinput="handleInput"/>
+    <button hidden="{{ !showBtn }}" bindtap="handleTap"> 取消 </button>
+</view>
+
+<navigator  url='/pages/goods_detail/goods_detail?goods_id={{ item.goods_id }}' class="show-result" wx:for="{{searchResultList}}" wx:key='goods_id'>
+    {{ item.goods_name }}
+</navigator>

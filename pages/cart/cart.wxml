@@ -1,0 +1,56 @@
+<view class="adress" wx:if="{{ !username }}">
+    <button type='primary' plain bindtap="handleAdress"> 添加收货地址 </button>
+</view>
+
+<view wx:else class='adress_info'>
+    <view class="left">
+        <view class="username"> {{  username }} </view>
+        <view class="site"> {{ position }} </view>
+    </view>
+    <view class="right"> {{ phone }} </view>
+</view>
+
+<view class="cart-title">
+    购物车
+</view>
+
+<view class="goods-list">
+    <view class="cart_goods" wx:for="{{ carts }}" wx:key='goods_id'>
+        <view class="check-wrap">
+            <checkbox-group bindchange="handlecheck" data-id="{{item.goods_id}}">
+                <checkbox checked="{{item.checked}}"></checkbox>
+            </checkbox-group>
+        </view>
+        <view class="cart-pic">
+            <image mode='widthFix' src='{{ item.goods_small_logo }}'></image>
+        </view>
+        <view class="cart-info">
+            <view class="cart-good-title"> {{ item.goods_name }} </view>
+            <view class="price-wrap">
+                <view class="price"> ￥{{ item.goods_price }} </view>
+                <view class="edit-num">
+                    <view class="reduce" bindtap="handleEditNum" data-id="{{item.goods_id}}" data-operation='{{-1}}'> - </view>
+                    <view class="num"> {{ item.num }} </view>
+                    <view class="add" bindtap="handleEditNum" data-id="{{item.goods_id}}" data-operation='{{1}}'> + </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="bottom-tool">
+    <view class="checkbox">
+        <checkbox-group bindchange="handleAllCheck">
+            <checkbox checked="{{allChecked}}"> 全选 </checkbox>
+        </checkbox-group>
+    </view>
+    <view class="price">
+        <view class="price-num">合计： {{totalPrice}}</view>
+        <text> 包含运费</text>
+    </view>
+    <view class="total" bindtap="handlePrice">结算({{totalNum}})</view>
+</view>
+
+<view wx:if="{{carts.length === 0}}" class='cart-empty'>
+    <image mode='widthFix' src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1495549002,2092677697&fm=26&gp=0.jpg'></image>
+</view>

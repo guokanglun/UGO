@@ -1,0 +1,30 @@
+<Tabs tabBar='{{tabBar}}' bind:getIndex='handleGetIndex'>
+
+    <view class="fd_title"> 问题的种类 </view>
+    <view class="fd-item-wrap">
+        <view class="fd-item">功能建议</view>
+        <view class="fd-item">购买遇到问题</view>
+        <view class="fd-item">性能问题</view>
+        <view class="fd-item">其他</view>
+    </view>
+
+    <view class="text-area">
+        <textarea value='{{ inputValue }}' name="" id="" cols="30" rows="10" placeholder="请描述一下您的问题" bindinput="handleInputdata"></textarea>
+        <view class="upload">
+            <button bindtap="handleUploadImg"> + </button>
+
+            <view class="upload-item"   wx:for="{{  uploadImg }}" wx:key='*this' bindtap="deleteImg" data-index='{{ index }}'>
+                <upImg src='{{ item }}'></upImg>
+            </view>
+
+        </view>
+    </view>
+
+    <view class="submit-btn">
+        <button bindtap="submitData">
+            <icon type='success_no_circle' color="white"></icon> 
+            <text>  提交 </text>
+        </button>
+    </view>
+
+</Tabs>

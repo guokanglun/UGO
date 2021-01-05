@@ -1,0 +1,11 @@
+<Tabs tabBar='{{ tabBar }}' bind:getIndex='handleGetIndex'>
+    <navigator class="collect-item" wx:for="{{collect}}" wx:key='goods_id' url='/pages/goods_detail/goods_detail?goods_id={{ item.goods_id }}'>
+          <view class="image">
+              <image mode='widthFix' src='{{ item.goods_small_logo }}'></image>
+          </view>
+          <view class="info">
+              <view class="title"> {{ item.goods_name }} </view>
+              <view class="price"> ￥{{ item.goods_price }} </view>
+          </view>
+    </navigator>
+</Tabs>

@@ -1,0 +1,15 @@
+.tabs{
+    display: flex;
+}
+
+.tabs view{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx 0;
+}
+
+.tabs view.active{
+    border-bottom: 5rpx solid #eb4450;
+}

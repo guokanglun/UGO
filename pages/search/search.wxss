@@ -1,0 +1,35 @@
+/* pages/search/search.wxss */
+
+page{
+    background-color: #ccc;
+}
+
+.search-input{
+    display: flex;
+    height: 70rpx;
+    padding: 20rpx;
+}
+
+.search-input input{
+    flex:1;
+    background-color: white;
+    padding-left: 20rpx;
+    height: 70rpx;
+}
+
+.search-input button{
+    height: 70rpx;
+    font-size: 30rpx;
+
+}
+
+.show-result{
+    border-bottom:1px solid #666;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:1;
+    overflow:hidden;
+    height: 90rpx;
+    line-height: 90rpx;
+    padding: 0 20rpx;
+}

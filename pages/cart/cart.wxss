@@ -1,0 +1,138 @@
+/* pages/cart/cart.wxss */
+page{
+    padding-bottom: 90rpx;
+}
+.adress {
+    padding: 20rpx;
+}
+
+.adress  button{
+    width: 60%;
+}
+
+.adress_info{
+    display: flex;
+    padding: 20rpx;
+}
+.adress_info .left{
+    flex:5
+}
+.adress_info .right{
+    flex:3;
+    text-align: right;
+}
+
+.cart-title{
+    font-size: 32rpx;
+    color: #eb4450;
+    padding: 20rpx;
+    font-weight: 800;
+    border-top: 1rpx solid #eb4450;
+    border-bottom: 1rpx solid #eb4450;
+}
+
+.cart_goods{
+    display: flex;
+    border-bottom:1px solid #ccc;
+}
+.cart_goods .check-wrap{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart_goods .cart-pic{
+    flex:2;
+}
+.cart_goods .cart-pic image{
+    width: 100%;
+}
+.cart_goods .cart-info{
+    flex:5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 20rpx;
+}
+.cart_goods .cart-info .cart-good-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.cart_goods .cart-info .price-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.cart_goods .cart-info .price-wrap .price{
+    color:#eb4450;
+}
+
+.cart_goods .cart-info .price-wrap .edit-num{
+    display: flex;
+}
+
+.cart_goods .cart-info .price-wrap .edit-num .reduce{
+    width: 50rpx;
+    height: 50rpx;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart_goods .cart-info .price-wrap .edit-num .num{
+    width: 20px;
+    height: 50rpx;
+    text-align: center;
+    line-height: 50rpx;
+}
+.cart_goods .cart-info .price-wrap .edit-num .add{
+    width: 50rpx;
+    height: 50rpx;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-tool{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 90rpx;
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+.bottom-tool .checkbox{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    padding-left: 20rpx;
+
+}
+.bottom-tool .price{
+    flex: 5;
+    text-align: right;
+    padding-right: 20rpx;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.bottom-tool .price text{
+    font-size: 25rpx;
+}
+.bottom-tool .total{
+    flex: 3;
+    background-color: #eb4450;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.cart-empty image{
+    width: 100%;
+}

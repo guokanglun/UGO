@@ -1,0 +1,44 @@
+
+.content{
+    display: flex;
+    height: 100vh;
+}
+.left{
+    flex:2;
+    background-color: #ddd;
+}
+.left view{
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+
+.left view.active{
+    background-color: pink;
+}
+
+.right{
+    flex:5;
+    /* background-color: blue; */
+}
+
+.right .title{
+    text-align: center;
+
+}
+.good-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30rpx;
+}
+.good-list .wrap{
+    width: 30%;
+}
+.good-list .wrap view{
+    text-align: center;
+}
+
+.good-list .wrap image{
+    width: 80%;
+    padding: 0 20rpx;
+}

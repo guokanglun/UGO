@@ -1,0 +1,74 @@
+
+<view class="top-pic">
+    <view class="btn" wx:if="{{!userinfo.nickName}}">
+        <button open-type="getUserInfo" bindgetuserinfo='handleUserInfo'> 登录 </button>
+    </view>
+
+    <view class="img" wx:else>
+        <view class="big-pic-wrap">
+            <image src='{{ userinfo.avatarUrl }}'></image>
+        </view>
+        <view class="small-pic-wrap">
+            <image mode='widthFix' src='{{userinfo.avatarUrl}}'></image>
+            <text> {{ userinfo.nickName}} </text>
+        </view>
+    </view>
+</view>
+
+<view class="info-wrap">
+    <view class="history">
+        <view class="history-item">
+            <text class='num'> 0 </text>
+            <text> 收藏的店铺 </text>
+        </view>
+        <navigator class="history-item" url='/pages/collect/collect'>
+            <text class='num'> {{ collectGoodsCount }} </text>
+            <text> 收藏的商品 </text>
+        </navigator>
+        <view class="history-item">
+            <text class='num'> 0 </text>
+            <text> 关注的商品 </text>
+        </view>
+        <view class="history-item">
+            <text class='num'> 0 </text>
+            <text> 我的足迹 </text>
+        </view>
+    </view>
+
+    <view class="order-wrap">
+        <view class="order"> 我的订单 </view>
+        <view class="order-item-wrap">
+            <navigator class="order-item" url='/pages/order/order?type=1'>
+                <text class="iconfont icon-ding_dan"></text>
+                <text> 全部订单 </text>
+            </navigator>
+            <navigator class="order-item"  url='/pages/order/order?type=2'>
+                <text class="iconfont icon-fukuantongzhi"></text>
+                <text> 待付款 </text>
+            </navigator>
+            <navigator class="order-item"  url='/pages/order/order?type=3'>
+                <text class="iconfont icon-receipt-address"></text>
+                <text> 待收货 </text>
+            </navigator>
+            <view class="order-item">
+                <text class="iconfont icon-tuihuotuikuan_dianpu"></text>
+                <text> 退款/退货 </text>
+            </view>
+        </view>
+    </view>
+
+    <view class="position-wrap">
+        <view class="position"> 收货地址管理 </view>
+    </view>
+
+    <view class="kefu-wrap">
+        <view class="kefu item">联系客服</view>
+        <navigator class="advice item" url='/pages/feedback/feedback'>意见反馈</navigator>
+        <view class="about-us item">关于我们</view>
+    </view>
+
+    <view class="share">
+        把应用推荐给其他人
+    </view>
+</view>
+
